@@ -5,4 +5,3 @@ urlpatterns = [
     path('books/',views.home, name="books-name"),
     path('books/<int:id>',views.show, name="single-book")
 ]
-
