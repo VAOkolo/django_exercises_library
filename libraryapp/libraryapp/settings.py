@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 INSTALLED_APPS = [
     'book.apps.BookConfig',
+    'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
