@@ -20,12 +20,17 @@ def not_found_404(request, exception):
 def server_error_500(request):
     return render(request, '500.html')
 
+def base(request):
+    return render(request, 'about.html')
+
+@login_required
 def home(request):
     # all_books
     all_books = {'books': Book.objects.all()}
     print(all_books)
     return render(request, 'home.html', all_books)
 
+@login_required
 def show(request, id):
     book = get_object_or_404(Book, pk=id)
     data = {'book': book}
